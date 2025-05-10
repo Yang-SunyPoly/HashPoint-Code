@@ -72,7 +72,7 @@ class NeRFSynthesis(Dataset):
         if pc_type == 'pointnerf':
             self.pc_path = os.path.join('pointnerf_ckpt//nerf_synthesis', self.scene+'.pth')
         else:
-            self.pc_path = f'/home/jiahao/nerf/data/nerfs/nerf_sythetic/{scene}/point_clouds/pointclouds.ply'
+            self.pc_path = f'./nerf_sythetic/{scene}/point_clouds/pointclouds.ply'
     def split_ray(self, grid_h=64, grid_w=64, shuffle=True):
         self.ray_id_list = []
         ray_index_x, ray_index_y = torch.meshgrid( torch.arange(0, self.ori_hw[1], dtype=torch.int64), torch.arange(0, self.ori_hw[0], dtype=torch.int64), indexing='xy')
@@ -93,6 +93,7 @@ class NeRFSynthesis(Dataset):
 
 
     def parse_info(self, split='train', num_src=4): 
+        #print("WORK:", os.getcwd())
         with open(os.path.join(self.root_dir, f'transforms_{split}.json'),'r') as f:
             img_info=json.load(f)
             focal=float(img_info['camera_angle_x'])

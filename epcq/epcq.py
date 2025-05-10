@@ -149,7 +149,7 @@ class NeuralPoints(nn.Module):
                  basis_dim: int = 9, # deg3: 1 + 3 + 5    
                  device: Union[torch.device, str] = "cuda:0",
                  pc_type: str='pointnerf', # gt_pc or pointnerf or pc
-                 gt_pc_path: str='/home/jiahao/nerf/data/nerfs/nerf_sythetic/lego/point_clouds/pointclouds.ply',
+                 gt_pc_path: str='./nerf_sythetic/lego/point_clouds/pointclouds.ply',
                  pointnerf_path: str='pointnerf_ckpt/nerf_synthesis/lego.pth',
                  alpha: float=5.0,
                  points = None,

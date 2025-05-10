@@ -1,3 +1,5 @@
 .eggs
 build
 epcq.egg-info
+*.pyc
+nerf_synthetic

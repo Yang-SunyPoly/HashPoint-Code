@@ -4,7 +4,7 @@ import torch
 import time
 import random
 import numpy as np
-import open3d as o3d
+#import open3d as o3d
 from tqdm import tqdm
 from dataset.nerfsynthesis import NeRFSynthesis
 from epcq.epcq import CameraSpec
