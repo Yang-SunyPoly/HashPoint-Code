@@ -74,7 +74,7 @@ def get_ray_intersections(ray1, ray2):
 
 def dataroot(dataset):
     if dataset == 'nerf_synthetic':
-        return r'/home/jiahao/nerf/data/nerfs/nerf_sythetic/'
+        return os.path.join(os.getcwd(), 'nerf_synthetic')
         # return r'F:/3D/NeRF/data/nerf_sythetic'
     elif dataset == 'dtu':
         return r'/home/jiahao/data/dtu/mvs_training/dtu'
